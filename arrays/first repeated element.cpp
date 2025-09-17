@@ -20,9 +20,9 @@ public:
     }
 };
 
-//by optimal solution Time complexity=O(n)
+//by optimal solution Time complexity=O(n), by swapping the value at right position
 
-lass Solution {
+class Solution {
 public:
     int findDuplicate(vector<int>& nums) {  
     int n = nums.size();
@@ -37,3 +37,19 @@ public:
         
     }
 };
+
+// positioning method   Time complexity = O(n)
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        
+      while(nums[0]!=nums[nums[0]])
+      {
+        swap(nums[0],nums[nums[0]]);
+        
+      }
+      return nums[0];
+    }
+};
+
+
